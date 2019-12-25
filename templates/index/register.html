@@ -1,0 +1,53 @@
+{% extends 'index/index.html' %}
+{% load static %}
+{% block content %}
+<div class="container">
+	<div class="row clearfix">
+		<div class="col-md-12 column">
+			<div class="row clearfix">
+				<div class="col-md-6 column">
+                    <p class="text-left">如果有问题请联系我们</p>
+                    <img src="{% static 'image/callme.jpg' %}" style="width: 300px;height: 300px" alt="">
+				</div>
+                <!--注册表单开始-->
+				<div class="col-md-6 column" id="reg">
+					<form role="form" action="/user/reg" method="post">
+						<div class="form-group">
+                            <label for="username">账号:</label>
+                            <input type="text" class="form-control" id="username" name="username" placeholder="请输入用户名" minlength="6" maxlength="18" />
+                            <small>请输入6-18位数字或字母</small>
+						</div>
+						<div class="form-group">
+                            <label for="password1">密码:</label>
+                            <input type="password" class="form-control" id="password1" name="password1" placeholder="请输入密码" minlength="6" maxlength="12" />
+						    <small>请输入6-12位数字或字母</small>
+                        </div>
+                        <div class="form-group">
+                            <label for="password2">确认密码:</label>
+                            <input type="password" class="form-control" id="password2" name="password2" placeholder="请确认密码" minlength="6" maxlength="12" />
+						    <small>请输入6-12位数字或字母</small>
+                        </div>
+                        <div class="form-group">
+                            <label for="nickname">昵称:</label>
+                            <input type="text" class="form-control" id="nickname" name="nickname" maxlength="7" placeholder="请输入您的昵称" />
+                            <small>不超过7个字</small>
+						</div>
+                        <div class="form-group">
+                            <label for="email">邮箱:</label>
+                            <input type="email" class="form-control" id="email" name="email" placeholder="请输入您的邮箱" />
+                            <small>请输入正确的邮箱</small>
+						</div>
+                        <div class="form-group">
+                            <label for="tel">联系方式:</label>
+                            <input type="tel" class="form-control" id="tel" name="tel" placeholder="请输入您的联系方式" />
+                            <small>请输入正确的联系方式</small>
+						</div>
+						<button type="submit" class="btn btn-default">注册</button>
+					</form>
+				</div>
+                <!--注册表单结束-->
+			</div>
+		</div>
+	</div>
+</div>
+{% endblock content %}

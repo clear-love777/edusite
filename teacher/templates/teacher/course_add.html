@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="/static/css/bootstrap.css">
+    <script src="/static/js/jquery-3.1.1.min.js"></script>
+    <link rel="stylesheet" href="/static/css/teacher.css">
+</head>
+<body>
+<div class="container">
+    <!--顶部-->
+    <div class="row clearfix">
+        <div class="col-md-12 column">
+            <nav class="navbar navbar-default" role="navigation">
+                <div class="col-md-3">
+                    <a href="/">logo</a>
+                </div>
+                <div class="col-md-9">
+                    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                        <ul class="nav navbar-nav">
+                            <li><a href="#">首页</a></li>
+                            <li><a href="#">学生</a></li>
+                            <li><a href="/teacher/teacher_index">教师</a></li>
+                            <li><a href="#">论坛</a></li>
+                            <li><a href="#">学校风采</a></li>
+                            <li><a href="#">图书馆</a></li>
+                        </ul>
+                        <ul class="nav navbar-nav navbar-right">
+                            <li><a href="#" class="tbox">个人中心</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+        </div>
+    </div>
+    <!--中间内容-->
+    <div class="row" style="min-height: 700px">
+        <!--左侧导航栏-->
+        <div class="col-sm-2">
+            <h2>教师中心</h2>
+            <ul class="nav nav-pills nav-stacked">
+                <li><a href="/teacher/teacher_index">教师管理</a></li>
+                <li class="active"><a href="/teacher/course_index">课程管理</a></li>
+                <li><a href="#">链接 3</a></li>
+            </ul>
+            <hr class="hidden-sm hidden-md hidden-lg">
+        </div>
+
+
+        <div class="col-sm-8" style="min-height: 600px">
+            <!--右侧内容-->
+            <div style="margin-top: 100px;margin-left: 100px">
+                <form class="form-horizontal" role="form" action="/teacher/course_add/" method="post">
+                    <div class="form-group">
+                        <label for="firstname" class="col-sm-2 control-label">课程名称</label>
+                        <div class="col-sm-10">
+                            <input name="course_name" type="text" class="form-control" id="firstname" placeholder="请输入课程名称">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="lastname" class="col-sm-2 control-label">课程老师</label>
+                        <div class="col-sm-10">
+                            <input type="text" class="form-control" id="firstname" value="王老师" readonly>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="lastname" class="col-sm-2 control-label">上课人数</label>
+                        <div class="col-sm-10">
+                            <input type="text" class="form-control" id="firstname" placeholder="请输入最多上课人数">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="lastname" class="col-sm-2 control-label">课程时间</label>
+                        <div class="col-sm-10 form-inline">
+                            <select class="form-control col-sm-10">
+                                <option value="">星期一</option>
+                                <option value="">星期二</option>
+                                <option value="">星期三</option>
+                                <option value="">星期四</option>
+                                <option value="">星期五</option>
+                            </select>
+                            <select class="form-control col-sm-10">
+                                <option value="">上午第一节</option>
+                                <option value="">上午第二节</option>
+                                <option value="">上午第三节</option>
+                                <option value="">上午第四节</option>
+                                <option value="">下午第一节</option>
+                                <option value="">下午第二节</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <div class="col-sm-offset-2 col-sm-10">
+                            <button type="submit" class="btn btn-success">确定</button>
+                            <button type="button" class="btn btn-danger" style="margin-left: 10px" onclick="window.location.href = '/teacher/course_index'">取消</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    {#页脚#}
+    <div class="row clearfix">
+        <div class="col-md-12 column">
+            <p>
+                <em>友情链接:</em>
+            <ul class="nav nav-pills">
+                <li role="presentation"><a href="#">百度一下</a></li>
+                <li role="presentation"><a href="#">谷歌</a></li>
+                <li role="presentation"><a href="#">火狐</a></li>
+            </ul>
+            </p>
+        </div>
+    </div>
+</div>
+</body>
+</html>
+

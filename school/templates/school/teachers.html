@@ -6,7 +6,7 @@
     <title></title>
     <meta name="description" content="">
     <meta name="keywords" content="">
-    
+    <script src="/static/js/jquery-3.1.1.min.js"></script>
     <link href="https://fonts.googleapis.com/css?family=Raleway:300,400,500,700|Open+Sans" rel="stylesheet">
     <link rel="stylesheet" href="/static/css/styles-merged.css">
     <link rel="stylesheet" href="/static/css/style.min.css">
@@ -61,40 +61,93 @@
               <span class="icon-bar"></span>
               <span class="icon-bar"></span>
             </button>
-            <a class="navbar-brand" href="/school/" title="uiCookies:Enlight">Enlight</a>
+            <a class="navbar-brand" href="/" title="uiCookies:Enlight">Enlight</a>
           </div>
 
           <div id="navbar-collapse" class="navbar-collapse collapse">
             <ul class="nav navbar-nav navbar-right">
-              <li><a href="/school/">Home</a></li>
-              <li><a href="/school/courses">Courses</a></li>
-              <li class="active"><a href="/school/teachers">Teachers</a></li>
-              <li><a href="/school/events">Events</a></li>
+<!--              <li class="active"><a href="/">首页</a></li>-->
+              <li><a href="/">首页</a></li>
+              <li><a href="#">学生</a></li>
+              <li><a href="/teacher/teacher_index">教师</a></li>
+              <li><a href="#">论坛</a></li>
               <li class="dropdown">
-                <a href="#" data-toggle="dropdown" class="dropdown-toggle">Pages</a>
+<!--                <a href="/school/" data-toggle="dropdown" class="dropdown-toggle">学校风采</a>-->
+                <a href="/school/">学校风采</a>
                 <ul class="dropdown-menu">
-                  <li><a href="/school/about">About Us</a></li>
-                  <li><a href="/school/courses">Courses</a></li>
-                  <li><a href="/school/course-single">Course Single</a></li>
-                  <li><a href="/school/gallery">Gallery</a></li>
+                  <li><a href="/school/about">关于我们</a></li>
+                  <li><a href="/school/gallery">画廊</a></li>
                   <li class="dropdown-submenu dropdown">
-                    <a href="#" data-toggle="dropdown" class="dropdown-toggle"><span>Sub Menu</span></a>
+                    <a href="#" data-toggle="dropdown" class="dropdown-toggle"><span>详情</span></a>
                     <ul class="dropdown-menu">
-                      <li><a href="#">Second Level Menu</a></li>
-                      <li><a href="#">Second Level Menu</a></li>
-                      <li><a href="#">Second Level Menu</a></li>
-                      <li><a href="#">Second Level Menu</a></li>
+                      <li><a href="/school/courses">课程</a></li>
+                      <li><a href="/school/course-single">课程单</a></li>
+                      <li><a href="/school/teachers">教师</a></li>
+                      <li><a href="/school/events">大事记</a></li>
                     </ul>
                   </li>
-                  <li><a href="/school/news">News</a></li>
+                  <li><a href="/school/news">新闻</a></li>
                 </ul>
               </li>
-              <li><a href="/school/contact">Contact</a></li>
+              <li><a href="#">图书馆</a></li>
+              <li><a href="/school/contact">个人中心</a></li>
             </ul>
           </div>
         </div>
       </nav>
-      
+       <div class="modal fade" id="mylogin">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <h4 class="modal-title" align="center">登录</h4>
+                <br/>
+                <form class="form-horizontal" role="form" action="/user/login" method="post">
+                    <div class="form-group">
+                        <label for="name" class="col-sm-offset-2 col-sm-2 control-label">账号</label>
+                        <div class="col-sm-5">
+                            <input type="text" class="form-control" id="name" name="name" placeholder="请输入您的账号">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="password" class="col-sm-offset-2 col-sm-2 control-label">密码</label>
+                        <div class="col-sm-5">
+                            <input type="password" class="form-control" id="password" name="password" placeholder="请输入您的密码">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="col-sm-5">
+                            <label for="password" class="col-sm-offset-2 col-sm-2 control-label">密码</label>
+                            <input type="checkbox" class="form-control" id="isactive" name="isactive"><span>记住密码</span>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="col-sm-offset-4 col-sm-3">
+                            <button id="submitBtn" type="submit" class="btn btn-default btn-block btn-primary">登录
+                            </button>
+                        </div>
+                        <div class="col-sm-2">
+                            <a class="btn" href="/user/reg">注册</a>
+                        </div>
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+        <!-- /.modal-content -->
+    </div><!-- /.modal-dialog -->
+</div>
+        <script type="text/javascript">
+    $(function () {
+        $(".tbox").click(function () {
+            $('#mylogin').modal('show') //显示模态框
+        });
+    });
+</script>
       <section class="probootstrap-section probootstrap-section-colored">
         <div class="container">
           <div class="row">

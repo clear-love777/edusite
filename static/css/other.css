@@ -1,0 +1,8 @@
+/*主页需要微调样式*/
+#bs-example-navbar-collapse-1 ul li:hover{
+            background-color: #5bc0de;
+        }
+/*注册需要微调样式*/
+#reg div input{
+            width: 80%;
+        }

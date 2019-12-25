@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="/static/css/bootstrap.css">
+    <script src="/static/js/jquery-3.1.1.min.js"></script>
+    <link rel="stylesheet" href="/static/css/teacher.css">
+</head>
+<body>
+<div class="container">
+    <!--顶部-->
+    <div class="row clearfix">
+        <div class="col-md-12 column">
+            <nav class="navbar navbar-default" role="navigation">
+                <div class="col-md-3">
+                    <a href="/">logo</a>
+                </div>
+                <div class="col-md-9">
+                    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                        <ul class="nav navbar-nav">
+                            <li><a href="#">首页</a></li>
+                            <li><a href="#">学生</a></li>
+                            <li><a href="/teacher/teacher_index">教师</a></li>
+                            <li><a href="#">论坛</a></li>
+                            <li><a href="#">学校风采</a></li>
+                            <li><a href="#">图书馆</a></li>
+                        </ul>
+                        <ul class="nav navbar-nav navbar-right">
+                            <li><a href="#" class="tbox">个人中心</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+        </div>
+    </div>
+    <!--中间内容-->
+    <div class="row" style="min-height: 700px">
+        <!--左侧导航栏-->
+        <div class="col-sm-2">
+            <h2>教师中心</h2>
+            <ul class="nav nav-pills nav-stacked">
+                <li class="active"><a href="/teacher/teacher_index">教师管理</a></li>
+                <li><a href="/teacher/course_index">课程管理</a></li>
+                <li><a href="#">链接 3</a></li>
+            </ul>
+            <hr class="hidden-sm hidden-md hidden-lg">
+        </div>
+
+
+        <div class="col-sm-8" style="min-height: 600px">
+            <!--右侧内容-->
+            <form class="form-horizontal" role="form" style="margin-top: 100px;margin-left: 120px">
+                <div class="form-group">
+                    <label for="firstname" class="col-sm-2 control-label">课程名称</label>
+                    <div class="col-sm-10">
+                        <p class="form-control-static">课程名称</p>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="lastname" class="col-sm-2 control-label">课程老师</label>
+                    <div class="col-sm-10">
+                        <p class="form-control-static">老师姓名</p>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="lastname" class="col-sm-2 control-label">课程时间</label>
+                    <div class="col-sm-5 form-inline">
+                        <p class="form-control-static">星期一:</p>
+                        <p class="form-control-static">上午_第一节</p>
+                    </div>
+                </div>
+                <table class="table" style="width:500px;margin-left:45px">
+                    <caption>学生成绩</caption>
+                    <thead>
+                    <tr>
+                        <th>学生姓名</th>
+                        <th>考试成绩</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr class="active">
+                        <td>张三</td>
+                        <td>78</td>
+                    </tr>
+                    <tr class="success">
+                        <td>李四</td>
+                        <td>90</td>
+                    </tr>
+                    </tbody>
+                </table>
+            </form>
+        </div>
+    </div>
+    {#页脚#}
+    <div class="row clearfix">
+        <div class="col-md-12 column">
+            <p>
+                <em>友情链接:</em>
+            <ul class="nav nav-pills">
+                <li role="presentation"><a href="#">百度一下</a></li>
+                <li role="presentation"><a href="#">谷歌</a></li>
+                <li role="presentation"><a href="#">火狐</a></li>
+            </ul>
+            </p>
+        </div>
+    </div>
+</div>
+</body>
+</html>
+

@@ -13,5 +13,5 @@ class User(models.Model):
     # 三种角色:student teacher admin 默认student
     user_role = models.CharField(max_length=11,verbose_name="角色",default="student")
 
-    email=models.EmailField(verbose_name="邮箱",default="")
-    phone=models.CharField(verbose_name="联系方式",max_length=16,default="")
+    email = models.EmailField(verbose_name="邮箱",default="")
+    phone = models.CharField(verbose_name="联系方式",max_length=16,default='')
